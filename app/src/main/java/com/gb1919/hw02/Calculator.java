@@ -1,42 +1,59 @@
 package com.gb1919.hw02;
 
+import android.util.Log;
+
 public class Calculator {
 
-    private float answer;
+    private float a;
+    private float b;
     private String action;
 
-    public Calculator(float answer, String action) {
-        this.answer =answer;
+    public Calculator(float a, float b, String action) {
+        this.a = a;
+        this.b = b;
         this.action = action;
     }
 
-    public String get_answer(){
-        return  (this.answer % 10f == 0f) ? Float.toString(this.answer) : Integer.toString((int)this.answer);
+
+    public void setA(String a) {
+        if (a.equals("")) a = "0";
+        this.a = Float.parseFloat(a);
     }
 
-    public void action_plus(String value){
-        this.answer += Float.parseFloat(value);
+    public void setB(String b) {
+        if (b.equals("")) b = "0";
+        this.b = Float.parseFloat(b);
     }
 
-    public void action_minus(String value){
-        this.answer -= Float.parseFloat(value);
+    public String getA() {
+        return "" + this.a;
     }
 
-
-    public void action_multy(String value){
-        this.answer *= Float.parseFloat(value);
+    public String getB() {
+        return "" + this.b;
     }
 
-
-    public void action_devide(String value){
-        this.answer /= Float.parseFloat(value);
-    }
-
-    public String getAction() {
-        return action;
-    }
 
     public void setAction(String action) {
         this.action = action;
+    }
+
+    public String resolve() {
+
+        switch (this.action) {
+            case "plus":
+                this.a += this.b;
+                break;
+            case "minus":
+                this.a -= this.b;
+                break;
+            case "multy":
+                this.a *= this.b;
+                break;
+            case "devide":
+                this.a /= this.b;
+                break;
+        }
+        return ((long)this.a == this.a) ? String.format("%d",(long)this.a) : String.format("%s",this.a);
     }
 }
