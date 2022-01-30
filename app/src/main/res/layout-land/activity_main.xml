@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_bg_color"
-    >
+    tools:ignore="MissingDefaultResource">
 
     <ImageView
         android:id="@+id/imageView"
@@ -19,13 +19,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:columnCount="4">
+        android:columnCount="5">
 
         <TextView
             android:id="@+id/text_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_columnSpan="4"
+            android:layout_columnSpan="5"
             android:layout_gravity="fill"
             android:layout_margin="@dimen/btn_margin"
             android:alpha="0.8"
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_clear"
             android:textSize="@dimen/btn_text_size" />
 
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_devide"
             android:textSize="@dimen/btn_text_size" />
 
@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_multiply"
             android:textColor="#BCAAA4"
             android:textSize="@dimen/btn_text_size"
@@ -70,38 +70,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_minus"
             android:textColor="#90A4AE"
             android:textSize="@dimen/btn_text_size"
             tools:ignore="TextContrastCheck" />
 
-        <Button
-            android:id="@+id/button_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
-            android:text="@string/_1"
-            android:textSize="@dimen/btn_text_size" />
-
-        <Button
-            android:id="@+id/button_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
-            android:text="@string/_2"
-            android:textSize="@dimen/btn_text_size" />
-
-        <Button
-            android:id="@+id/button_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
-            android:text="@string/_3"
-            android:textSize="@dimen/btn_text_size" />
 
         <Button
             android:id="@+id/button_plus"
@@ -110,16 +84,46 @@
             android:layout_rowSpan="2"
             android:layout_gravity="fill"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_plus"
             android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:id="@+id/button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_margin"
+            android:backgroundTint="@color/btn_bgcolor_land"
+            android:text="@string/_1"
+            android:textSize="@dimen/btn_text_size" />
+
+
+
+        <Button
+            android:id="@+id/button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_margin"
+            android:backgroundTint="@color/btn_bgcolor_land"
+            android:text="@string/_2"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:id="@+id/button_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_margin"
+            android:backgroundTint="@color/btn_bgcolor_land"
+            android:text="@string/_3"
+            android:textSize="@dimen/btn_text_size" />
+
 
         <Button
             android:id="@+id/button_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_4"
             android:textSize="@dimen/btn_text_size" />
 
@@ -128,7 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_5"
             android:textSize="@dimen/btn_text_size" />
 
@@ -137,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_6"
             android:textSize="@dimen/btn_text_size" />
 
@@ -147,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_7"
             android:textSize="@dimen/btn_text_size" />
 
@@ -156,17 +160,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_8"
-            android:textSize="@dimen/btn_text_size" />
-
-        <Button
-            android:id="@+id/button_9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
-            android:text="@string/_9"
             android:textSize="@dimen/btn_text_size" />
 
         <Button
@@ -176,19 +171,28 @@
             android:layout_rowSpan="2"
             android:layout_gravity="fill"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_enter"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:id="@+id/button_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_margin"
+            android:backgroundTint="@color/btn_bgcolor_land"
+            android:text="@string/_9"
             android:textSize="@dimen/btn_text_size" />
 
         <Button
             android:id="@+id/button_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnSpan="2"
+
+            android:layout_columnSpan="1"
             android:layout_gravity="fill"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_0"
             android:textSize="@dimen/btn_text_size"
             tools:ignore="DuplicateSpeakableTextCheck" />
@@ -198,7 +202,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
-            android:backgroundTint="@color/btn_bgcolor"
+            android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_dot"
             android:textSize="@dimen/btn_text_size" />
 
