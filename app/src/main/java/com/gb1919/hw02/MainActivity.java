@@ -1,23 +1,41 @@
 package com.gb1919.hw02;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.ButtonBarLayout;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView tv_result;
-    private int[] buttons;
-    Calculator calculator;
-    boolean is_answered = true;
-    String last_value = "";
 
+    final String ACTION_PLUS = "plus";
+    final String ACTION_MINUS = "minus";
+    final String ACTION_MULTI = "multy";
+    final String ACTION_DIVISION = "devide";
+    final String ACTION_POINT = ".";
+    final char char_ACTION_POINT = '.';
+
+    private TextView tv_result;
+    private Calculator calculator = new Calculator();
+    boolean is_answered = true;
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable("calculator", calculator);
+        outState.putString("tv_result", (String) tv_result.getText());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        calculator = savedInstanceState.getParcelable("calculator");
+        tv_result.setText(savedInstanceState.getCharSequence("tv_result"));
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +43,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         tv_result = findViewById(R.id.text_result);
 
-        calculator = new Calculator(0f, 0f, "plus");
+
         is_answered = true;
 
-        buttons = new int[]{
+        int[] buttons = new int[]{
                 R.id.button_0,
                 R.id.button_1,
                 R.id.button_2,
@@ -51,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             findViewById(button).setOnClickListener(this);
         }
     }
+
 
     @Override
     public void onClick(View view) {
@@ -78,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case (R.id.button_clear): {
                 is_answered = true;
-                calculator.setAction("plus");
+                calculator.setAction(ACTION_PLUS);
                 calculator.setA("0");
                 calculator.setB("0");
                 tv_result.setText("");
@@ -88,13 +107,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 boolean found = false;
                 for (int i = 0; i < tv_result.getText().toString().length(); i++) {
-                    if (tv_result.getText().toString().charAt(i) == '.') {
+                    if (tv_result.getText().toString().charAt(i) == char_ACTION_POINT) {
                         found = true;
                         break;
                     }
                 }
                 if (found) break;
-                tv_result.setText(tv_result.getText().toString() + ".");
+                tv_result.setText(tv_result.getText().toString() + ACTION_POINT);
                 is_answered = false;
                 break;
             }
