@@ -54,6 +54,6 @@ public class Calculator {
                 this.a /= this.b;
                 break;
         }
-        return ((long)this.a == this.a) ? String.format("%d",(long)this.a) : String.format("%s",this.a);
+        return ((long) this.a == this.a) ? String.format("%d", (long) this.a) : String.format("%s", this.a);
     }
 }

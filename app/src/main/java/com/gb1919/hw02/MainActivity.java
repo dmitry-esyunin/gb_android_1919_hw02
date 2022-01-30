@@ -50,9 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int button : buttons) {
             findViewById(button).setOnClickListener(this);
         }
-
     }
-
 
     @Override
     public void onClick(View view) {
@@ -97,26 +95,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 if (found) break;
                 tv_result.setText(tv_result.getText().toString() + ".");
-                is_answered =false;
+                is_answered = false;
                 break;
-
             }
-
-
             case (R.id.button_plus):
             case (R.id.button_minus):
             case (R.id.button_multy):
             case (R.id.button_devide): {
 
                 if (!is_answered) {
-                   calculator.setB(tv_result.getText().toString());
-                   tv_result.setText(calculator.resolve());
-                   is_answered = true;
+                    calculator.setB(tv_result.getText().toString());
+                    tv_result.setText(calculator.resolve());
+                    is_answered = true;
                 }
-
                 calculator.setAction(button_name);
-
-
                 break;
             }
             case (R.id.button_enter): {

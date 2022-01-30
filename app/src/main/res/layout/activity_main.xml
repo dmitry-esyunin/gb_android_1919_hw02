@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_bg_color"
-    >
+    android:background="@color/main_bg_color">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/back"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/back" />
 
     <GridLayout
         android:layout_width="wrap_content"

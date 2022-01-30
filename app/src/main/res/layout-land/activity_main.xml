@@ -11,9 +11,9 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/back"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/back" />
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -96,7 +96,6 @@
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_1"
             android:textSize="@dimen/btn_text_size" />
-
 
 
         <Button
