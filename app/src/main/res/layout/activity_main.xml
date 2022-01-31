@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/main_bg_color">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/imageView"
@@ -22,8 +21,6 @@
 
         <TextView
             android:id="@+id/text_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_columnSpan="4"
             android:layout_gravity="fill"
             android:layout_margin="@dimen/btn_margin"
@@ -37,8 +34,6 @@
 
         <Button
             android:id="@+id/button_clear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_clear"
@@ -46,8 +41,6 @@
 
         <Button
             android:id="@+id/button_devide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_devide"
@@ -55,8 +48,6 @@
 
         <Button
             android:id="@+id/button_multy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_multiply"
@@ -66,8 +57,6 @@
 
         <Button
             android:id="@+id/button_minus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_minus"
@@ -77,8 +66,6 @@
 
         <Button
             android:id="@+id/button_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_1"
@@ -86,8 +73,6 @@
 
         <Button
             android:id="@+id/button_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_2"
@@ -95,8 +80,6 @@
 
         <Button
             android:id="@+id/button_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_3"
@@ -104,8 +87,6 @@
 
         <Button
             android:id="@+id/button_plus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_rowSpan="2"
             android:layout_gravity="fill"
             android:layout_margin="@dimen/btn_margin"
@@ -115,8 +96,6 @@
 
         <Button
             android:id="@+id/button_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_4"
@@ -124,8 +103,6 @@
 
         <Button
             android:id="@+id/button_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_5"
@@ -133,8 +110,6 @@
 
         <Button
             android:id="@+id/button_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_6"
@@ -143,8 +118,6 @@
 
         <Button
             android:id="@+id/button_7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_7"
@@ -152,8 +125,6 @@
 
         <Button
             android:id="@+id/button_8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_8"
@@ -161,8 +132,6 @@
 
         <Button
             android:id="@+id/button_9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_9"
@@ -170,8 +139,6 @@
 
         <Button
             android:id="@+id/button_enter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_rowSpan="2"
             android:layout_gravity="fill"
             android:layout_margin="@dimen/btn_margin"
@@ -181,8 +148,6 @@
 
         <Button
             android:id="@+id/button_0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnSpan="2"
             android:layout_gravity="fill"
@@ -194,8 +159,6 @@
 
         <Button
             android:id="@+id/button_point"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor"
             android:text="@string/_dot"
