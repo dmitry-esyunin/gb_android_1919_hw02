@@ -51,18 +51,14 @@
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_multiply"
-            android:textColor="#BCAAA4"
-            android:textSize="@dimen/btn_text_size"
-            tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+            android:textSize="@dimen/btn_text_size" />
 
         <Button
             android:id="@+id/button_minus"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_minus"
-            android:textColor="#90A4AE"
-            android:textSize="@dimen/btn_text_size"
-            tools:ignore="TextContrastCheck" />
+            android:textSize="@dimen/btn_text_size" />
 
         <Button
             android:id="@+id/button_plus"
@@ -152,8 +148,7 @@
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_0"
-            android:textSize="@dimen/btn_text_size"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            android:textSize="@dimen/btn_text_size" />
 
         <Button
             android:id="@+id/button_point"

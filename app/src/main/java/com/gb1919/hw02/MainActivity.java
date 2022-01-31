@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     final String ACTION_DIVISION = "devide";
     final String ACTION_POINT = ".";
     final char char_ACTION_POINT = '.';
+    final String BUTTON_PREFIX = "button_";
+    final int BUTTON_PREFIX_LEN = BUTTON_PREFIX.length();
+
 
     private TextView tv_result;
     private Calculator calculator = new Calculator();
@@ -75,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        String button_name = getResources().getResourceEntryName(view.getId()).substring(7);
+        String button_name = getResources().getResourceEntryName(view.getId()).substring(BUTTON_PREFIX_LEN);
 
         switch (view.getId()) {
             case (R.id.button_0):   // numbers
