@@ -124,7 +124,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case (R.id.button_minus):
             case (R.id.button_multy):
             case (R.id.button_devide): {
-
                 if (!is_number_completed) {
                     calculator.setB(tv_result.getText().toString());
                     tv_result.setText(calculator.resolve());
@@ -139,6 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     is_number_completed = true;
                 }
                 tv_result.setText(calculator.resolve());
+                break;
             }
             default:
                 break;

@@ -73,7 +73,6 @@ public class Calculator implements Parcelable {
         return ((long) this.a == this.a) ? String.format("%d", (long) this.a) : String.format("%s", this.a);
     }
 
-
     @Override
     public int describeContents() {
         return 0;
