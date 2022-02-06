@@ -19,7 +19,7 @@
         android:layout_gravity="center"
         android:columnCount="5">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_result"
             android:layout_columnSpan="5"
             android:layout_gravity="fill"
@@ -32,35 +32,35 @@
             android:textColor="@color/white"
             android:textSize="@dimen/tview_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_1"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_1"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_2"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_2"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_3"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_3"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_clear"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_clear"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_minus"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
@@ -68,35 +68,35 @@
             android:textSize="@dimen/btn_text_size" />
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_4"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_4"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_5"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_5"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_6"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_6"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_multy"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_multiply"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_devide"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
@@ -104,28 +104,28 @@
             android:textSize="@dimen/btn_text_size" />
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_7"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_7"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_8"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_8"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_9"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"
             android:text="@string/_9"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_plus"
             android:layout_rowSpan="2"
             android:layout_gravity="fill"
@@ -134,7 +134,7 @@
             android:text="@string/_plus"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_enter"
             android:layout_rowSpan="2"
             android:layout_gravity="fill"
@@ -143,7 +143,7 @@
             android:text="@string/_enter"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_0"
             android:layout_columnSpan="2"
             android:layout_gravity="fill"
@@ -152,7 +152,7 @@
             android:text="@string/_0"
             android:textSize="@dimen/btn_text_size" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/button_point"
             android:layout_margin="@dimen/btn_margin"
             android:backgroundTint="@color/btn_bgcolor_land"

@@ -1,12 +1,16 @@
 package com.gb1919.hw02;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,12 +22,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     final char char_ACTION_POINT = '.';
     final String BUTTON_PREFIX = "button_";
     final int BUTTON_PREFIX_LEN = BUTTON_PREFIX.length();
-
+    private static final String PREF_NAME = "key_pref";
+    private static final String PREF_THEME_KEY = "key_pref_theme";
+    Random random = new Random();
 
     private TextView tv_result;
     private Calculator calculator = new Calculator();
     boolean is_number_completed;
-
+    int[] themes;
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
@@ -46,10 +52,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         tv_result = findViewById(R.id.text_result);
         is_number_completed = true;
+        themes();
         add_listeners();
     }
 
+    private void themes() {
+       themes = new int[]{
+               R.style.myThemeDefault,
+               R.style.myThemeGreen,
+               R.style.myThemeBlue,
+               R.style.myThemeRed
+       };
+    }
+
     private void add_listeners() {
+
+        tv_result.setOnClickListener(this);
+
         int[] buttons = new int[]{
                 R.id.button_0,
                 R.id.button_1,
@@ -81,6 +100,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String button_name = getResources().getResourceEntryName(view.getId()).substring(BUTTON_PREFIX_LEN);
 
         switch (view.getId()) {
+
+
+            //  случайный выбор темы при клике на экран с результатом вычислений
+            case (R.id.text_result):
+                int theme_index = (int) random.nextInt(themes.length);
+                Log.i("", "index = " + theme_index + "    R.style = " + themes[theme_index]);
+                setAppTheme(themes[theme_index]);
+                break;
+
             case (R.id.button_0):   // numbers
             case (R.id.button_1):
             case (R.id.button_2):
@@ -143,5 +171,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
         }
+    }
+
+
+    protected void setAppTheme(int codeStyle) {
+        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(PREF_THEME_KEY, codeStyle);
+        editor.apply();
+    }
+
+    protected int getAppTheme() {
+        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        return sharedPref.getInt(PREF_THEME_KEY,R.style.myThemeDefault);
     }
 }
