@@ -1,6 +1,7 @@
 package com.gb1919.hw02;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
@@ -15,7 +17,8 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    final String KEY_INTENT = "key_theme_index";
+    private static final int REQESTCODE = 3432341;
+    static String KEY_INTENT = "key_theme_index";
 
     final String ACTION_PLUS = "plus";
     final String ACTION_MINUS = "minus";
@@ -52,21 +55,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(getAppTheme());
+        themes();
+//        setTheme(getAppTheme());
+        setTheme(getAppThemeByIndex());
+
         setContentView(R.layout.activity_main);
         tv_result = findViewById(R.id.text_result);
         is_number_completed = true;
-        themes();
+
         add_listeners();
     }
 
-    private void themes() {
-       themes = new int[]{
-               R.style.Theme_Hw02,
-               R.style.myThemeGreen,
-               R.style.myThemeBlue,
-               R.style.myThemeRed
-       };
+
+    public void themes() {
+        themes = new int[]{
+                R.style.Theme_Hw02,
+                R.style.myThemeRed,
+                R.style.myThemeGreen,
+                R.style.myThemeBlue
+
+        };
     }
 
     private void add_listeners() {
@@ -106,16 +114,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String button_name = getResources().getResourceEntryName(view.getId()).substring(BUTTON_PREFIX_LEN);
 
 
-
         switch (view.getId()) {
-
 
 
             case (R.id.imageView):   //  случайный выбор темы
             case (R.id.text_result):
-                int theme_index = (int) random.nextInt(themes.length);
-                setAppTheme(themes[theme_index]);
-                recreate();
+                /*int theme_index = (int) random.nextInt(themes.length);
+                setAppTheme(theme_index);
+                recreate();*/
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                intent.putExtra(KEY_INTENT, getThemeIndex());
+                startActivityForResult(intent, REQESTCODE);
+
+
                 break;
             case (R.id.button_0):   // numbers
             case (R.id.button_1):
@@ -189,8 +200,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editor.apply();
     }
 
-    protected int getAppTheme() {
+
+
+    private int getAppThemeByIndex() {
+        int i = getThemeIndex();
+        if (i > themes.length) i = 1;
+        Log.i("getAppThemeByIndex", "индекс = " + i + "  themes[index] = " + themes[i]);
+        return themes[i];
+    }
+
+    private int getThemeIndex() {
         SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return sharedPref.getInt(PREF_THEME_KEY, R.style.Theme_Hw02);
+        return sharedPref.getInt(PREF_THEME_KEY, 0);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode != REQESTCODE || resultCode != RESULT_OK) return;
+
+        int index = data.getIntExtra(KEY_INTENT, 0);
+        Log.i("", "получил индекс = " + index + "  themes[index] = " + themes[index]);
+
+
+        setAppTheme(index);
+        recreate();
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        getAppThemeByIndex();
+        Log.i("onDestroy", "**********" );
     }
 }

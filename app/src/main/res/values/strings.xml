@@ -19,4 +19,10 @@
     <string name="_0">0</string>
     <string name="_dot">.</string>
     <string name="todo">TODO</string>
+    <string name="settings_tv_title_text">Темы:</string>
+    <string name="settings_rb_default_caption">По умолчанию</string>
+    <string name="settings_rb_red_caption">Красная</string>
+    <string name="settings_rb_green_caption">Зеленая</string>
+    <string name="settings_rb_blue_caption">Синяя</string>
+    <string name="settings_btn_apply_caption">Применить</string>
 </resources>
