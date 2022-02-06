@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void add_listeners() {
 
-        tv_result.setOnClickListener(this);
+//        tv_result.setOnClickListener(this);
 
         int[] buttons = new int[]{
                 R.id.button_0,
@@ -87,7 +87,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 R.id.button_multy,
                 R.id.button_devide,
                 R.id.button_enter,
-                R.id.button_point
+                R.id.button_point,
+                R.id.imageView
+
         };
         for (int button : buttons) {
             findViewById(button).setOnClickListener(this);
@@ -105,13 +107,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
 
 
-            //  случайный выбор темы при клике на экран с результатом вычислений
+
+            case (R.id.imageView):   //  случайный выбор темы
             case (R.id.text_result):
                 int theme_index = (int) random.nextInt(themes.length);
                 setAppTheme(themes[theme_index]);
                 recreate();
                 break;
-
             case (R.id.button_0):   // numbers
             case (R.id.button_1):
             case (R.id.button_2):

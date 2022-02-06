@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -14,18 +13,18 @@
     <color name="main_btn_color">#555</color>
 
 
-    <color name="red_100">#F8D4D3</color>
-    <color name="red_200">#FB4844</color>
-    <color name="red_500">#FF4234</color>
-    <color name="red_600">#FB3D2F</color>
-    <color name="red_700">#D72A2A</color>
-    <color name="red_800">#C82424</color>
-    <color name="red_900">#AE0B0B</color>
+    <color name="red_100">#CEF8D4D3</color>
+    <color name="red_200">#CED83E3B</color>
+    <color name="red_500">#CEFF4234</color>
+    <color name="red_600">#CEFB3D2F</color>
+    <color name="red_700">#CED72A2A</color>
+    <color name="red_800">#CEC82424</color>
+    <color name="red_900">#CEAE0B0B</color>
 
 
-    <color name="green">#66EF12</color>
+    <color name="green">#CE4CAF50</color>
 
-    <color name="blue">#10B0F4</color>
+    <color name="blue">#CE10B0F4</color>
 
 
 </resources>
