@@ -14,6 +14,9 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+    final String KEY_INTENT = "key_theme_index";
+
     final String ACTION_PLUS = "plus";
     final String ACTION_MINUS = "minus";
     final String ACTION_MULTI = "multy";
