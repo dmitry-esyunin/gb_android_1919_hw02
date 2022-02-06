@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme());
         setContentView(R.layout.activity_main);
         tv_result = findViewById(R.id.text_result);
         is_number_completed = true;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void themes() {
        themes = new int[]{
-               R.style.myThemeDefault,
+               R.style.Theme_Hw02,
                R.style.myThemeGreen,
                R.style.myThemeBlue,
                R.style.myThemeRed
@@ -99,14 +100,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         String button_name = getResources().getResourceEntryName(view.getId()).substring(BUTTON_PREFIX_LEN);
 
+
+
         switch (view.getId()) {
 
 
             //  случайный выбор темы при клике на экран с результатом вычислений
             case (R.id.text_result):
                 int theme_index = (int) random.nextInt(themes.length);
-                Log.i("", "index = " + theme_index + "    R.style = " + themes[theme_index]);
                 setAppTheme(themes[theme_index]);
+                recreate();
                 break;
 
             case (R.id.button_0):   // numbers
@@ -183,6 +186,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     protected int getAppTheme() {
         SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        return sharedPref.getInt(PREF_THEME_KEY,R.style.myThemeDefault);
+        return sharedPref.getInt(PREF_THEME_KEY, R.style.Theme_Hw02);
     }
 }

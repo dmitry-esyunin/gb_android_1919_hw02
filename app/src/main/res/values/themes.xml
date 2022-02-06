@@ -14,15 +14,6 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <!-- Base application theme. -->
-    <style name="myThemeDefault" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
-        <item name="materialButtonStyle"> @style/myButtonStyle</item>
-    </style>
-
 
     <style name="myThemeRed" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:navigationBarColor">@color/red_500</item>
@@ -77,19 +68,6 @@
         <item name="colorTertiaryContainer">@color/blue</item>
         <item name="colorOnTertiaryContainer">@color/blue</item>
         <item name="android:statusBarColor">@color/blue</item>
-    </style>
-
-    <style name="myButtonStyle" parent="Widget.MaterialComponents.Button">
-
-        <item name="android:insetTop">0dp</item>
-        <item name="android:insetBottom">0dp</item>
-        <item name="backgroundTint">@color/green</item>
-    </style>
-
-    <style name="myStyleTheme">
-        <item name="android:layout_width">0sp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
     </style>
 
 
