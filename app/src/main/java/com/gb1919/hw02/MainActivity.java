@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private static final int REQESTCODE = 3432341;
-    static String KEY_INTENT = "key_theme_index";
+    static String KEY_INTENT = "KEY_INTENT";
+    static String KEY_INTENT_THEME = "KEY_INTENT_THEME";
 
     final String ACTION_PLUS = "plus";
     final String ACTION_MINUS = "minus";
@@ -79,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void add_listeners() {
 
-//        tv_result.setOnClickListener(this);
 
         int[] buttons = new int[]{
                 R.id.button_0,
@@ -99,7 +99,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 R.id.button_devide,
                 R.id.button_enter,
                 R.id.button_point,
-                R.id.imageView
+                R.id.imageView,
+                R.id.text_result
 
         };
         for (int button : buttons) {
@@ -124,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 recreate();*/
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                 intent.putExtra(KEY_INTENT, getThemeIndex());
+                intent.putExtra(KEY_INTENT_THEME, themes[getThemeIndex()]);
                 startActivityForResult(intent, REQESTCODE);
 
 
