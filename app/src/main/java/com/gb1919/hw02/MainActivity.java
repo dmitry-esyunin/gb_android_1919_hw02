@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 R.id.button_devide,
                 R.id.button_enter,
                 R.id.button_point,
-                R.id.imageView,
+                R.id.imageView_themes,
                 R.id.text_result
 
         };
@@ -118,8 +118,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
 
 
-            case (R.id.imageView):   //  случайный выбор темы
-            case (R.id.text_result):
+            case (R.id.imageView): break;
+            case (R.id.imageView_themes):
+                //   выбор темы
                 /*int theme_index = (int) random.nextInt(themes.length);
                 setAppTheme(theme_index);
                 recreate();*/

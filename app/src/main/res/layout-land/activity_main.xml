@@ -13,6 +13,13 @@
         android:scaleType="fitXY"
         app:srcCompat="@drawable/back" />
 
+    <ImageView
+        android:id="@+id/imageView_themes"
+        android:layout_width="@dimen/iv_theme_width"
+        android:layout_height="@dimen/iv_theme_height"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/themes" />
+
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
